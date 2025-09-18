@@ -10,7 +10,7 @@ import os
 class DefaultConfig:
     """Bot Configuration"""
 
-    PORT = 8000
+    PORT = int(os.getenv("PORT", 8000))  # Azure provides PORT dynamically
     APP_ID = "YourAppId" # This is the application ID for the bot service.
     APP_PASSWORD = "YourAppPAssword"  # This is the password for the bot service.
     APP_TYPE = "SingleTenant" # "SingleTenant" or "MultiTenant"
